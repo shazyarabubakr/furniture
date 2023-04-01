@@ -33,25 +33,14 @@ const Footer = () => {
             </button>
           </div>
         </div>
-        <ItemsContainer />
+        <ItemsContainer className="px-2"/>
         <div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10
-      text-center pt-2 text-gray-400 text-sm pb-8"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  border-beige  gap-10
+         text-center pt-2 text-gray-400 text-sm pb-8"
         >
           <span>© 2023 shaza. All rights reserved.</span>
           <span>Terms · Privacy Policy</span>
-
-          <div className="text-teal-500">
-            <span
-              className="p-2 cursor-pointer inline-flex items-center
-              rounded-full mx-1.5 text-xl  hover:text-gray-100 hover:bg-teal-500
-              duration-300 "
-            >
-              <i class="fi fi-brands-facebook"></i>
-              <i class="fi fi-brands-linkedin"></i>
-              <i class="fi fi-brands-instagram"></i>
-            </span>
-          </div>
+          <SocialIcons Icons={Icons} />
         </div>
       </footer>
     </>

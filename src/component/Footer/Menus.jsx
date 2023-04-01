@@ -16,3 +16,10 @@ export const INFORMATION = [
   { name: "Sign in", link: "#" },
   { name: "Services", link: "#" },
 ];
+
+export const Icons = [
+  { class: "fi fi-brands-facebook", link: "#" },
+  { class: "fi fi-brands-linkedin", link: "#" },
+  { class: "fi fi-brands-instagram", link: "#" },
+  { class: "fi fi-brands-twitter", link: "#" },
+];

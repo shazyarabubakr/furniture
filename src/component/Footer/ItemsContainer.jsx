@@ -1,6 +1,6 @@
 import React from "react";
 import Item from "./Item";
-import { CONTACT, CATEGORY, INFORMATION} from "./Menus";
+import { CONTACT, CATEGORY, INFORMATION } from "./Menus";
 
 const ItemsContainer = () => {
   return (
