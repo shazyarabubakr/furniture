@@ -8,7 +8,7 @@ const Navbar = () => {
   return (
     <>
       {/* BRAND NAME */}
-      <nav className="flex justify-between items-center w-full h-14 px-4 text-white bg-darkBlue fixed ">
+      <nav className="flex justify-between items-center w-full h-14 px-4 text-white bg-gray-900 fixed ">
         <div>
           <h1 className="text-5xl font-signature ml-2 flex sm:justify-start text-white cursor-pointer">
             Diwaxan
@@ -40,19 +40,18 @@ const Navbar = () => {
           <li className="px-2 cursor-pointer">
             <i class="fi fi-rr-user" size={30}></i>
           </li>
+          {/*RESPONSIVE NAVBAR*/}
+          <div
+            onClick={() => setNav(!nav)}
+            className="cursor-pointer text-white pr-4 z-10 md:hidden "
+          >
+            {nav ? (
+              <i class="fi fi-br-cross" size={30}></i>
+            ) : (
+              <i class="fi fi-rr-menu-burger" size={30}></i>
+            )}
+          </div>
         </ul>
-
-        {/*RESPONSIVE NAVBAR*/}
-        <div
-          onClick={() => setNav(!nav)}
-          className="cursor-pointer text-white pr-4 z-10 md:hidden "
-        >
-          {nav ? (
-            <i class="fi fi-br-cross" size={30}></i>
-          ) : (
-            <i class="fi fi-rr-menu-burger" size={30}></i>
-          )}
-        </div>
 
         {nav && (
           <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-darkBlue text-white">
