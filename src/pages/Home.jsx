@@ -1,17 +1,18 @@
 import React from "react";
-
-import furn from "../asset/image/furniture1.jpg";
+import Slider from "../component/Slider";
+import AboutUs from "../component/AboutUs";
+import HomeCategory from "../component/HomeCategory";
+import HomeService from "../component/HomeService";
+import HomeNewProducts from "../component/HomeNewProducts";
 
 const Home = () => {
   return (
     <>
-      <div>
-        <div>
-          <figure>
-            <img src={furn} alt="logo" />
-          </figure>
-        </div>
-      </div>
+      <Slider />
+      <AboutUs />
+      <HomeCategory />
+      <HomeService />
+      <HomeNewProducts />
     </>
   );
 };

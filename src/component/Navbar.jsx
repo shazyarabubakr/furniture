@@ -1,14 +1,32 @@
 import React from "react";
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+//navlink bo away ka click y lekra state akay rangy bgore.
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
-
+  const navItems = [
+    {
+      id: 1,
+      name: "home",
+    },
+    {
+      id: 2,
+      name: "product",
+    },
+    {
+      id: 3,
+      name: "service",
+    },
+    {
+      id: 4,
+      name: "about",
+    },
+  ];
   return (
     <>
       {/* BRAND NAME */}
-      <nav className="flex justify-between items-center w-full h-14 px-4 text-white bg-gray-900 fixed ">
+      <nav className="flex justify-between items-center w-full h-14 px-4 text-white z-50 bg-gray-900 fixed ">
         <div>
           <h1 className="text-5xl font-signature ml-2 flex sm:justify-start text-white cursor-pointer">
             Diwaxan
@@ -17,29 +35,29 @@ const Navbar = () => {
 
         {/* NAV ITEMS */}
         <ul className="hidden md:flex justify-center">
-          <li className="px-4 cursor-pointer uppercase font-normal text-white  hover:border-b-[2px] border-b-beige hover:scale-105 duration-100">
-            <Link to="/">home</Link>
-          </li>
-          <li className="px-4 cursor-pointer uppercase font-normal text-white hover:border-b-[2px] border-b-beige hover:scale-105 duration-100">
-            <Link to="/product">product</Link>
-          </li>
-          <li className="px-4 cursor-pointer uppercase font-normal text-white hover:border-b-[2px] border-b-beige hover:scale-105 duration-100">
-            <Link to="/service">service</Link>
-          </li>
-          <li className="px-4 cursor-pointer uppercase font-normal text-white hover:border-b-[2px] border-b-beige hover:scale-105 duration-100">
-            <Link to="/about">about</Link>
-          </li>
+          {navItems.map(({ id, name }) => (
+            <li
+              key={id}
+              className="px-4 cursor-pointer uppercase font-normal text-white  hover:border-b-[2px] border-b-beige hover:scale-105 duration-100"
+            >
+              <NavLink to="/">{name}</NavLink>
+            </li>
+          ))}
         </ul>
 
         {/* ICONS */}
 
         <ul className="flex ">
           <li className="px-2 cursor-pointer">
-            <i class="fi fi-rr-shopping-cart" size={30}></i>
+            <i className="fi fi-bs-search text-lg"></i>
           </li>
           <li className="px-2 cursor-pointer">
-            <i class="fi fi-rr-user" size={30}></i>
+            <i className="fi fi-rr-shopping-cart text-lg"></i>
           </li>
+          <li className="px-2 cursor-pointer">
+            <i className="fi fi-rr-user text-lg"></i>
+          </li>
+
           {/*RESPONSIVE NAVBAR*/}
           <div
             onClick={() => setNav(!nav)}
@@ -90,21 +108,6 @@ const Navbar = () => {
                 about
               </Link>
             </li>
-            {/* {links.map(({ id, link }) => (
-              <li
-                key={id}
-                className="px-4 cursor-pointer capitalize py-6 text-4xl"
-              >
-                <Link
-                  to={link}
-                  smooth
-                  duration={500}
-                  onClick={() => setNav(!nav)}
-                >
-                  {link}
-                </Link>
-              </li>
-            ))} */}
           </ul>
         )}
       </nav>

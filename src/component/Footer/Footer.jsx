@@ -26,14 +26,14 @@ const Footer = () => {
            sm:w-72 w-full sm:mr-5 mr-1 lg:mb-0 mb-4 py-2.5 text-center rounded px-2 focus:outline-none"
             />
             <button
-              className="bg-beige px-5 py-2.5 font-medium
+              className="bg-beige px-7 py-2.5 font-medium
            rounded-md text-white  uppercase md:w-auto w-full"
             >
               subscribe
             </button>
           </div>
         </div>
-        <ItemsContainer className="px-2"/>
+        <ItemsContainer className="px-2" />
         <div
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  border-beige  gap-10
          text-center pt-2 text-gray-400 text-sm pb-8"

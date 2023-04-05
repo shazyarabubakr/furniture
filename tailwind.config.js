@@ -24,5 +24,5 @@ module.exports = {
       signature: ["Montez"],
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 };
