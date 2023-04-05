@@ -63,7 +63,7 @@ const HomeNewProducts = () => {
                     </span>
                     <a
                       href="#home"
-                      className="text-white bg-beige hover:bg-lightBeige font-medium rounded-full text-sm px-4za d py-2 text-center"
+                      className="text-white bg-beige hover:bg-lightBeige font-medium rounded-full text-sm px-4 py-2 text-center"
                     >
                       <i className={basket}></i>
                     </a>
