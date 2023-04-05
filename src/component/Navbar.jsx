@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 //navlink bo away ka click y lekra state akay rangy bgore.
 
 const Navbar = () => {
@@ -9,18 +9,22 @@ const Navbar = () => {
     {
       id: 1,
       name: "home",
+      link: "/",
     },
     {
       id: 2,
       name: "product",
+      link: "/product",
     },
     {
       id: 3,
       name: "service",
+      link: "/service",
     },
     {
       id: 4,
       name: "about",
+      link: "/about",
     },
   ];
   return (
@@ -35,12 +39,12 @@ const Navbar = () => {
 
         {/* NAV ITEMS */}
         <ul className="hidden md:flex justify-center">
-          {navItems.map(({ id, name }) => (
+          {navItems.map(({ id, name, link }) => (
             <li
               key={id}
               className="px-4 cursor-pointer uppercase font-normal text-white  hover:border-b-[2px] border-b-beige hover:scale-105 duration-100"
             >
-              <NavLink to="/">{name}</NavLink>
+              <Link to={link}>{name}</Link>
             </li>
           ))}
         </ul>
