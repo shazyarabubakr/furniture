@@ -9,7 +9,7 @@ const AboutUs = () => {
             <h2 class=" font-semibold capitalize -tracking-wider text-xl mb-8">
               about us
             </h2>
-            <p class="leading-relaxed text-lg">
+            <p class="leading-relaxed md:text-lg sm:text-sm">
               This is a company that has been manufactoring and selling
               furniture in kurdistan according to italian standards for more
               than 10 years. The site presents the entire range of manufactured
@@ -18,7 +18,7 @@ const AboutUs = () => {
               buyer can see the goods with his own eyes.
             </p>
             <button
-              className="mt-8 bg-beige px-7 py-2.5 font-medium
+              className="mt-8 bg-beige md:px-7 md:py-2.5 px-5 py-1.5 font-medium
           rounded-md text-white capitalize w-auto"
             >
               read all

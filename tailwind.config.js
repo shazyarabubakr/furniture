@@ -23,6 +23,9 @@ module.exports = {
     fontFamily: {
       signature: ["Montez"],
     },
+    backdropBlur: {
+      xs: '2px',
+    }
   },
   plugins: [],
 };

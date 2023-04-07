@@ -52,11 +52,11 @@ const HomeCategory = () => {
           <div className="flex flex-wrap -m-4 ">
             {/**categories */}
             {category.map(({ id, imgUrl, name, alt }) => (
-              <div key={id} className="lg:w-1/3 w-1/2 relative ">
+              <div key={id} className="lg:w-1/3 w-1/2 relative">
                 <img
                   src={imgUrl}
                   alt={alt}
-                  className="object-cover lg:h-full md:h-36 h-60 w-full"
+                  className="object-cover lg:h-80 md:h-36 h-60 w-full"
                 />
                 <h1 className="sm:text-2xl text-xl font-medium uppercase text-white absolute center-absolute">
                   {name}

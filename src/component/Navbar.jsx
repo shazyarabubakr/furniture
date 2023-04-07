@@ -68,9 +68,9 @@ const Navbar = () => {
             className="cursor-pointer text-white pr-4 z-10 md:hidden "
           >
             {nav ? (
-              <i class="fi fi-br-cross" size={30}></i>
+              <i className="fi fi-br-cross text-xl"></i>
             ) : (
-              <i class="fi fi-rr-menu-burger" size={30}></i>
+              <i className="fi fi-rr-menu-burger text-xl"></i>
             )}
           </div>
         </ul>
