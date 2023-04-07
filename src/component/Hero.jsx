@@ -30,13 +30,13 @@ const Hero = () => {
               <br className="md:block" />
               of modern <span className="inline-block ">furniture</span>
             </h2>
-            <p className="pr-3 mb-5 text-sm  text-gray-700 md:text-lg">
+            <p className="pr-3 mb-5 text-gray-700 md:text-lg">
               Create your own home comfort with us
             </p>
             <div className="flex items-center">
               <a
                 href="/"
-                className=" items-center hidden  md:px-7 md:py-2.5 px-5 py-1.5  text-sm font-medium md:text-xl tracking-wide text-white transition duration-200 rounded shadow-md bg-beige hover:bg-lightBeige focus:shadow-outline focus:outline-none"
+                className=" items-center  md:px-7 md:py-2.5 px-5 py-1.5  text-sm font-medium md:text-xl tracking-wide text-white transition duration-200 rounded shadow-md bg-beige hover:bg-lightBeige focus:shadow-outline focus:outline-none"
               >
                 Get started
               </a>
