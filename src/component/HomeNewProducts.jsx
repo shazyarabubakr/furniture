@@ -1,12 +1,14 @@
 import React from "react";
 import kitchen from "../asset/image/kitchen.jpg";
-import livingroom from "../asset/image/livingroom.jpg";
+import furn1 from "../asset/image/furn1.jpg";
+import bedroom from "../asset/image/bedroom.jpg";
+
 import { Link } from "react-router-dom";
 const HomeNewProducts = () => {
-  const products = [
+  const newProducts = [
     {
       id: 1,
-      imgUrl: "kitchen",
+      imgUrl: furn1,
       alt: "modern sofa",
       name: "Modern sofa",
       price: "678$",
@@ -14,7 +16,7 @@ const HomeNewProducts = () => {
     },
     {
       id: 2,
-      imgUrl: livingroom,
+      imgUrl: bedroom,
       alt: "classic sofa",
       name: "Modern sofa",
       price: "376$",
@@ -28,68 +30,70 @@ const HomeNewProducts = () => {
       price: "200$",
       basket: "fi fi-rr-shopping-cart md:text-lg text-sm",
     },
-    {
-      id: 4,
-      imgUrl: kitchen,
-      alt: "modern sofa",
-      name: "Modern sofa",
-      price: "149$",
-      basket: "fi fi-rr-shopping-cart md:text-lg text-sm",
-    },
   ];
   return (
-    <section className="text-darkblue">
-      <div className="container px-4 py-24 mx-auto">
-        <div class="flex flex-wrap -m-4 ">
-          <div className="flex flex-wrap w-full mb-20">
-            <div className="lg:w-1/2 w-full mb-6 lg:mb-0 px-4">
-              <h1 className="md:text-3xl text-xl font-medium title-font mb-2 ">
-                New Products
-              </h1>
-              <div className="h-1 w-20 bg-beige rounded "></div>
-            </div>
-          </div>
-          {products.map(({ id, imgUrl, alt, name, price, basket }) => (
-            <div key={id} className="lg:w-1/4 md:w-1/3 w-1/2 p-4 ">
-              <Link to="#" className="group block overflow-hidden">
-                <div className="relative h-[300px] sm:h-44">
-                  <img
-                    src="https://images.unsplash.com/photo-1540574163026-643ea20ade25?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-                    alt=""
-                    className="absolute inset-0 h-full w-full object-cover opacity-100 group-hover:opacity-0"
-                  />
-                  <img
-                    src="https://images.unsplash.com/photo-1588706235076-627d896e9f67?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80"
-                    alt=""
-                    className="absolute inset-0 h-full w-full object-cover opacity-0 group-hover:opacity-100"
-                  />
-                </div>
+    <section>
+      <div className="max-w-screen-xl px-4 py-8 mx-auto sm:px-6 sm:py-12 lg:px-8">
+        <h1 className="md:text-3xl text-xl font-medium title-font mb-2 ">
+          New Products
+        </h1>
+        <div className="h-1 w-20 bg-beige rounded "></div>
 
-                <div className="relative bg-white pt-3">
-                  <h3 className="text-sm text-gray-700 group-hover:underline group-hover:underline-offset-4">
-                    {name}
-                  </h3>
+        <ul className="grid grid-cols-1 gap-4 mt-8 lg:grid-cols-3 ">
+          <li>
+            <Link to="#" className="relative block group ">
+              <img
+                src={kitchen}
+                alt=""
+                className="object-cover w-full transition duration-500 aspect-square group-hover:opacity-90"
+              />
 
-                  <div className="mt-1.5 flex items-center justify-between text-gray-900">
-                    <p className="tracking-wide">{price}</p>
+              <div className="absolute inset-0 flex flex-col items-start justify-end p-6">
+                <h3 className="text-xl font-medium text-white">Kitchen</h3>
 
-                    <p className="text-lg p-r-1">
-                      <i className="fi fi-rr-shopping-cart"></i>
-                    </p>
-                  </div>
-                </div>
-              </Link>
-            </div>
-          ))}
-        </div>
-        <div className="w-full flex flex-row-reverse	">
-          <button
-            className="mt-8 bg-beige md:px-7 md:py-2.5 px-5 py-1.5 font-medium
-          rounded-md text-white w-auto"
-          >
-            See more <i class="fi fi-rr-angle-small-right"></i>
-          </button>
-        </div>
+                <span className="mt-1.5 inline-block bg-beige px-5 py-3 text-xs font-medium uppercase tracking-wide text-white">
+                  Shop Now
+                </span>
+              </div>
+            </Link>
+          </li>
+
+          <li>
+            <Link to="#" className="relative block group">
+              <img
+                src={bedroom}
+                alt=""
+                className="object-cover w-full transition duration-500 aspect-square group-hover:opacity-90"
+              />
+
+              <div className="absolute inset-0 flex flex-col items-start justify-end p-6">
+                <h3 className="text-xl font-medium text-white">Bedroom</h3>
+
+                <span className="mt-1.5 inline-block bg-beige  px-5 py-3 text-xs font-medium uppercase tracking-wide text-white">
+                  Shop Now
+                </span>
+              </div>
+            </Link>
+          </li>
+
+          <li className="lg:col-span-2 lg:col-start-2 lg:row-span-2 lg:row-start-1">
+            <Link to="#" className="relative block group">
+              <img
+                src={furn1}
+                alt=""
+                className="object-cover w-full transition duration-500 aspect-square group-hover:opacity-90"
+              />
+
+              <div className="absolute inset-0 flex flex-col items-start justify-end p-6">
+                <h3 className="text-xl font-medium text-white">Modern Sofa</h3>
+
+                <span className="mt-1.5 inline-block bg-beige px-5 py-3 text-xs font-medium uppercase tracking-wide text-white">
+                  Shop Now
+                </span>
+              </div>
+            </Link>
+          </li>
+        </ul>
       </div>
     </section>
   );
