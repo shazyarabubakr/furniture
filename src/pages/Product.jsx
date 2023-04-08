@@ -5,7 +5,7 @@ import Cards from "../component/Cards";
 const Product = () => {
   return (
     <>
-      <section className="flex flex-row justify-between ">
+      <section className="flex flex-row">
         <Sidebar />
         <Cards />
       </section>

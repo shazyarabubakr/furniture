@@ -23,14 +23,14 @@ const Hero = () => {
         <div className="relative flex flex-col items-start lg:h-screen w-full max-w-xl px-4 mx-auto md:px-8 md:max-w-screen-xl ">
           <div className=" mb-16 lg:my-40 lg:max-w-lg backdrop-blur-xs ">
             <h2 className="mb-5 font-sans md:text-3xl font-bold tracking-tight sm:text-2xl sm:leading-none">
-              <span className="font-signature text-beige md:text-8xl text-4xl">
+              <span className="font-signature font-bold text-beige md:text-8xl text-4xl">
                 New
               </span>{" "}
               Collection
               <br className="md:block" />
               of modern <span className="inline-block ">furniture</span>
             </h2>
-            <p className="pr-3 mb-5  text-gray-700 md:text-lg">
+            <p className="pr-3 mb-5  md:text-gray-700 text-gray-500 hidden md:text-lg">
               Create your own home comfort with us
             </p>
             <div className="flex items-center">

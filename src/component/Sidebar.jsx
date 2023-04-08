@@ -45,16 +45,11 @@ const Sidebar = () => {
   ];
   return (
     <>
-      <aside className="lg:w-1/3 px-4 py-16 w-1/4">
+      <aside className="lg:w-1/3 px-2 py-4">
         <nav className=" text-sm text-darkBlue font-medium">
           <div className="flex flex-col space-y-8 pt-2 lg:text-2xl sm:text-lg">
             {sideItems.map(({ id, name, link }) => (
-              <Link
-                id={id}
-                rel="noopener noreferrer"
-                to={link}
-                className="lg:hover:border-b-3 hover:border-b-3 hover:border-beige lg:hover:rounded-sm hover:rounded-sm"
-              >
+              <Link id={id} rel="noopener noreferrer" to={link} className="">
                 {name}
               </Link>
             ))}
