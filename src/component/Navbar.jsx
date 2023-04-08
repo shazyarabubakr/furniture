@@ -30,7 +30,7 @@ const Navbar = () => {
   return (
     <>
       {/* BRAND NAME */}
-      <nav className="flex justify-between items-center w-full h-14 px-4 text-white z-50 bg-gray-900 fixed ">
+      <nav className="flex justify-between items-center w-full h-14 px-4 text-white z-50 bg-gray-900 sticky top-0">
         <div>
           <h1 className="text-5xl font-signature ml-2 flex sm:justify-start text-white cursor-pointer">
             Diwaxan
