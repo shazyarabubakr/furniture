@@ -7,6 +7,8 @@ import Service from "./pages/Service";
 import About from "./pages/About";
 
 import { Routes, Route } from "react-router-dom";
+import Cards from "./component/Cards";
+import ItemDetails from "./component/Card";
 
 function App() {
   return (
@@ -14,7 +16,14 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/product" element={<Product />} />
+        <Route path="/product">
+          <Route index element={<Product />} />
+          <Route path="/cards" element={<Cards />} />
+          <Route path="/:id" element={<ItemDetails />
+            
+          }
+          />
+        </Route>
         <Route path="/service" element={<Service />} />
         <Route path="/about" element={<About />} />
         <Route path="*" element={<NotFound />} />

@@ -1,7 +1,7 @@
 import React from "react";
 import furn1 from "../asset/image/furn1.jpg";
 
-const Card = () => {
+const ItemDetails = () => {
   return (
     <section className="text-darkblue overflow-hidden">
       <div className="container px-5 py-24 mx-auto">
@@ -37,4 +37,4 @@ const Card = () => {
   );
 };
 
-export default Card;
+export default ItemDetails;
