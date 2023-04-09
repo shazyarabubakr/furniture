@@ -4,6 +4,7 @@ import AboutUs from "../component/AboutUs";
 import HomeCategory from "../component/HomeCategory";
 import HomeService from "../component/HomeService";
 import HomeNewProducts from "../component/HomeNewProducts";
+import Review from "../component/Review";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <HomeCategory />
       <HomeService />
       <HomeNewProducts />
+      <Review />
     </>
   );
 };

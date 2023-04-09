@@ -5,32 +5,32 @@ import bedroom from "../asset/image/bedroom.jpg";
 
 import { Link } from "react-router-dom";
 const HomeNewProducts = () => {
-  const newProducts = [
-    {
-      id: 1,
-      imgUrl: furn1,
-      alt: "modern sofa",
-      name: "Modern sofa",
-      price: "678$",
-      basket: "fi fi-rr-shopping-cart md:text-lg text-sm",
-    },
-    {
-      id: 2,
-      imgUrl: bedroom,
-      alt: "classic sofa",
-      name: "Modern sofa",
-      price: "376$",
-      basket: "fi fi-rr-shopping-cart md:text-lg text-sm",
-    },
-    {
-      id: 3,
-      imgUrl: kitchen,
-      alt: "vintage sofa",
-      name: "Modern sofa",
-      price: "200$",
-      basket: "fi fi-rr-shopping-cart md:text-lg text-sm",
-    },
-  ];
+  // const newProducts = [
+  //   {
+  //     id: 1,
+  //     imgUrl: furn1,
+  //     alt: "modern sofa",
+  //     name: "Modern sofa",
+  //     price: "678$",
+  //     basket: "fi fi-rr-shopping-cart md:text-lg text-sm",
+  //   },
+  //   {
+  //     id: 2,
+  //     imgUrl: bedroom,
+  //     alt: "classic sofa",
+  //     name: "Modern sofa",
+  //     price: "376$",
+  //     basket: "fi fi-rr-shopping-cart md:text-lg text-sm",
+  //   },
+  //   {
+  //     id: 3,
+  //     imgUrl: kitchen,
+  //     alt: "vintage sofa",
+  //     name: "Modern sofa",
+  //     price: "200$",
+  //     basket: "fi fi-rr-shopping-cart md:text-lg text-sm",
+  //   },
+  // ];
   return (
     <section>
       <div className="max-w-screen-xl px-4 py-8 mx-auto sm:px-6 sm:py-12 lg:px-8">
