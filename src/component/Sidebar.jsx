@@ -5,7 +5,7 @@ const Sidebar = () => {
     {
       id: 1,
       name: "All Products",
-      link: "#allproducts",
+      link: "/AllProducts",
     },
     {
       id: 2,
@@ -46,12 +46,12 @@ const Sidebar = () => {
   return (
     <>
       {/* grid grid-rows-1 row-span-1 */}
-      <aside className="px-2 py-4">
+      <aside className="px-2 py-8">
         <nav className="text-sm text-darkBlue font-medium">
           <div className="grid grid-cols-1 col-span-6 space-y-8 p-2 lg:text-xl text-sm">
             <div className="">
               {sideItems.map(({ id, name, link }) => (
-                <div className="w-full mb-2 lg:mb-0">
+                <div className="w-full mb-4 lg:mb-8">
                   <Link
                     id={id}
                     rel="noopener noreferrer"

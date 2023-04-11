@@ -16,14 +16,18 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/product">
+        <Route path="/product" element={<Product />} />
+
+        {
+          /* <Route path="/product">
           <Route index element={<Product />} />
           <Route path="/cards" element={<Cards />} />
           <Route path="/:id" element={<ItemDetails />
             
-          }
-          />
-        </Route>
+          } */
+          //   />
+          // </Route>
+        }
         <Route path="/service" element={<Service />} />
         <Route path="/about" element={<About />} />
         <Route path="*" element={<NotFound />} />

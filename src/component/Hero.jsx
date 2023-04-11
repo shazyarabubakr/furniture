@@ -1,5 +1,6 @@
 import React from "react";
 import furn1 from "../asset/image/furn2.jpg";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -34,12 +35,12 @@ const Hero = () => {
               Create your own home comfort with us
             </p>
             <div className="flex items-center">
-              <a
-                href="/"
+              <Link
+                to="/product"
                 className=" items-center  md:px-7 md:py-2.5 px-5 py-1.5  text-sm font-medium md:text-xl tracking-wide text-white transition duration-200 rounded shadow-md bg-beige hover:bg-lightBeige focus:shadow-outline focus:outline-none"
               >
                 Get started
-              </a>
+              </Link>
             </div>
           </div>
         </div>
