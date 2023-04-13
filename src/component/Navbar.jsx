@@ -53,15 +53,11 @@ const Navbar = () => {
 
         <ul className="flex ">
           <li className="px-2 cursor-pointer">
-            <i className="fi fi-bs-search text-lg"></i>
-          </li>
-          <li className="px-2 cursor-pointer">
             <i className="fi fi-rr-shopping-cart text-lg"></i>
           </li>
           <li className="px-2 cursor-pointer">
             <i className="fi fi-rr-user text-lg"></i>
           </li>
-
           {/*RESPONSIVE NAVBAR*/}
           <div
             onClick={() => setNav(!nav)}
@@ -77,41 +73,24 @@ const Navbar = () => {
 
         {nav && (
           <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-darkBlue text-white">
-            <li className="px-4 cursor-pointer uppercase font-normal text-4xl py-6 text-white">
-              <Link to="/" smooth duration={500} onClick={() => setNav(!nav)}>
-                home
-              </Link>
-            </li>
-            <li className="px-4 cursor-pointer uppercase font-normal text-4xl py-6 text-white">
-              <Link
-                to="/product"
-                smooth
-                duration={500}
-                onClick={() => setNav(!nav)}
+            {navItems.map(({ id, name, link }) => (
+              <li
+                key={id}
+                className="px-4 cursor-pointer uppercase font-normal text-4xl py-6 text-white"
               >
-                product
-              </Link>
-            </li>
-            <li className="px-4 cursor-pointer uppercase font-normal text-4xl py-6 text-white">
-              <Link
-                to="/service"
-                smooth
-                duration={500}
-                onClick={() => setNav(!nav)}
-              >
-                service
-              </Link>
-            </li>
-            <li className="px-4 cursor-pointer uppercase font-normal text-4xl py-6 text-white">
-              <Link
-                to="/about"
-                smooth
-                duration={500}
-                onClick={() => setNav(!nav)}
-              >
-                about
-              </Link>
-            </li>
+                <Link
+                  to={link}
+                  smooth
+                  duration={500}
+                  onClick={() => setNav(!nav)}
+                >
+                  {name}
+                </Link>
+              </li>
+            ))}
+            {/* <li className="px-2 cursor-pointer">
+              <i className="fi fi-bs-search text-lg"></i>
+            </li> */}
           </ul>
         )}
       </nav>

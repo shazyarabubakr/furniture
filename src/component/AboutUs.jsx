@@ -22,7 +22,7 @@ const AboutUs = () => {
               <Link
                 to="/About"
                 className="mt-10 bg-beige md:px-7 md:py-2.5 px-5 py-1.5 font-medium
-                rounded-md text-white capitalize w-auto text-sm"
+                rounded-md text-white capitalize w-auto text-sm md:text-lg"
               >
                 read all
               </Link>

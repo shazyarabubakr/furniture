@@ -7,7 +7,7 @@ import modernSofa from "../asset/image/furn1.jpg";
 import bedroom from "../asset/image/bedroom.jpg";
 import outdoor from "../asset/image/outdoor.jpg";
 
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Cards = () => {
   const [productImage, setProductImage] = useState(false);
@@ -80,10 +80,11 @@ const Cards = () => {
               <div className="h-1 w-20 bg-beige rounded"></div>
             </div>
           </div>
+          {/* {`/products/${Product.id}`} */}
           <div className="grid md:grid-cols-4 md:col-span-2 grid-cols-2 col-span-3">
             {data.map(({ id, image1, image2, alt, name, price, basket }) => (
               <div key={id} className="md:w-full w-full p-2 ">
-                <NavLink to="#" className="group block overflow-hidden">
+                <Link to="/itemdetails" className="group block overflow-hidden">
                   <div
                     className="relative h-[300px] sm:h-48"
                     onMouseOver={() => setProductImage(true)}
@@ -106,7 +107,6 @@ const Cards = () => {
                       />
                     }
                     )_
-                   
                   </div>
 
                   <div className="relative bg-white pt-3">
@@ -122,7 +122,7 @@ const Cards = () => {
                       </p>
                     </div>
                   </div>
-                </NavLink>
+                </Link>
               </div>
             ))}
           </div>

@@ -37,7 +37,7 @@ const Hero = () => {
             <div className="flex items-center">
               <Link
                 to="/product"
-                className=" items-center  md:px-7 md:py-2.5 px-5 py-1.5  text-sm font-medium md:text-xl tracking-wide text-white transition duration-200 rounded shadow-md bg-beige hover:bg-lightBeige focus:shadow-outline focus:outline-none"
+                className=" items-center  md:px-7 md:py-2.5 px-5 py-1.5  text-sm font-medium md:text-lg tracking-wide text-white transition duration-200 rounded shadow-md bg-beige hover:bg-lightBeige focus:shadow-outline focus:outline-none"
               >
                 Get started
               </Link>
