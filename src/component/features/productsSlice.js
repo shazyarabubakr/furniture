@@ -7,24 +7,24 @@ export const productsApi = api.injectEndpoints({
       providesTags: ["Products"],
     }),
     addProducts: builder.mutation({
-      query: (todo) => ({
-        url: "/todos/",
+      query: (product) => ({
+        url: "/#/",
         method: "POST",
-        body: todo,
+        body: product,
       }),
       invalidatesTags: ["Products"],
     }),
     completeProducts: builder.mutation({
-      query: (todo) => ({
-        url: `/todos/${todo.id}`,
+      query: (product) => ({
+        url: `/#/${product.id}`,
         method: "PATCH",
-        body: todo,
+        body: product,
       }),
       invalidatesTags: ["Products"],
     }),
     deleteProducts: builder.mutation({
       query: ({ id }) => ({
-        url: `/todos/${id}`,
+        url: `/#/${id}`,
         method: "DELETE",
         body: id,
       }),
