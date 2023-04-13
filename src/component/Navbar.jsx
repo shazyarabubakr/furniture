@@ -53,7 +53,9 @@ const Navbar = () => {
 
         <ul className="flex ">
           <li className="px-2 cursor-pointer">
-            <i className="fi fi-rr-shopping-cart text-lg"></i>
+            <Link to="/shoppingcart">
+              <i className="fi fi-rr-shopping-cart text-lg"></i>
+            </Link>
           </li>
           <li className="px-2 cursor-pointer">
             <i className="fi fi-rr-user text-lg"></i>

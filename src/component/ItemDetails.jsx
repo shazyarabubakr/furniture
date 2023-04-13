@@ -116,7 +116,7 @@ const ItemDetails = () => {
                 type="button"
                 className="inline-flex items-center justify-center rounded-md border-2 border-transparent bg-beige bg-none px-12 py-3 text-center text-base font-bold text-white transition-all duration-200 ease-in-out focus:shadow hover:bg-lightBeige"
               >
-                Add to cart
+                <Link to="#">Add to cart</Link>
               </button>
             </div>
 

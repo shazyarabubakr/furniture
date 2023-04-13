@@ -9,6 +9,8 @@ import About from "./pages/About";
 import { Routes, Route } from "react-router-dom";
 import Cards from "./component/Cards";
 import ItemDetails from "./component/ItemDetails";
+import ShoppingCart from "./component/ShoppingCart";
+import Checkout from "./component/Checkout";
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
         <Route path="/product" element={<Product />} />
         <Route path="/cards" element={<Cards />} />
         <Route path="/itemdetails" element={<ItemDetails />} />
+        <Route path="/shoppingcart" element={<ShoppingCart />} />
+        <Route path="/checkout" element={<Checkout />} />
 
         {/* <Route path="/itemdetails/:id" element={<ItemDetails />} /> */}
 
