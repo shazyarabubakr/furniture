@@ -56,9 +56,9 @@ const HomeCategory = () => {
                 <img
                   src={imgUrl}
                   alt={alt}
-                  className="object-cover lg:h-80 md:h-36 h-60 w-full"
+                  className="object-cover lg:h-80 md:h-36 h-60 w-full hover:opacity-90"
                 />
-                <h1 className="sm:text-2xl text-xl font-medium uppercase text-white absolute center-absolute">
+                <h1 className="sm:text-2xl text-xl font-medium uppercase text-white absolute  center-absolute">
                   {name}
                 </h1>
               </div>

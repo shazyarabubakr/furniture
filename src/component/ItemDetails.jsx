@@ -1,6 +1,14 @@
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import kitchen from "../asset/image/kitchen.jpg";
+import { add } from "../component/State/Slice/CartSlice";
+import { useDispatch } from "react-redux";
+import { items } from "../CartItems";
+
 const ItemDetails = () => {
+  const dispatch = useDispatch();
+  const { id } = useParams();
+  const item = items.find((item) => item.id === parseInt(id));
+  const { name, price, image1 } = item;
   const rating = [
     {
       id: 1,
@@ -28,7 +36,7 @@ const ItemDetails = () => {
                 <div className="max-w-xl overflow-hidden rounded-lg">
                   <img
                     className="h-full w-full max-w-full object-cover"
-                    src={kitchen}
+                    src={image1}
                     alt=""
                   />
                 </div>
@@ -73,7 +81,7 @@ const ItemDetails = () => {
 
           <div className="lg:col-span-2 lg:row-span-2 lg:row-end-2">
             <h1 className="sm: text-2xl font-bold text-gray-900 sm:text-3xl">
-              Modern kitchen
+              {name}
             </h1>
 
             <div className="mt-5 flex items-center">
@@ -109,14 +117,16 @@ const ItemDetails = () => {
 
             <div className="mt-10 flex flex-col items-center justify-between space-y-4 border-t border-b py-4 sm:flex-row sm:space-y-0">
               <div className="flex items-end">
-                <h1 className="text-2xl font-bold">$60.50</h1>
+                <h1 className="text-2xl font-bold">{price}</h1>
               </div>
 
               <button
                 type="button"
                 className="inline-flex items-center justify-center rounded-md border-2 border-transparent bg-beige bg-none px-12 py-3 text-center text-base font-bold text-white transition-all duration-200 ease-in-out focus:shadow hover:bg-lightBeige"
               >
-                <Link to="#">Add to cart</Link>
+                <Link to="#" onClick={() => dispatch(add(item))}>
+                  Add to cart
+                </Link>
               </button>
             </div>
 

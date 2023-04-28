@@ -1,10 +1,12 @@
 import React from "react";
 import { useState } from "react";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 //navlink bo away ka click y lekra state akay rangy bgore.
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
+  const { amount } = useSelector((state) => state.cart);
   const navItems = [
     {
       id: 1,
@@ -53,8 +55,11 @@ const Navbar = () => {
 
         <ul className="flex ">
           <li className="px-2 cursor-pointer">
-            <Link to="/shoppingcart">
+            <Link to="/checkout">
               <i className="fi fi-rr-shopping-cart text-lg"></i>
+              <div className="absolute w-4 h-4 rounded-full z-10  flex items-center justify-center top-6 right-[50px] text-[10px] bg-white text-gray-900">
+                {amount}
+              </div>
             </Link>
           </li>
           <li className="px-2 cursor-pointer">

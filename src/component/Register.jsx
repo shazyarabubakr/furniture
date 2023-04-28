@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import register from "../asset/image/register.jpg";
 import { Link } from "react-router-dom";
 
 const Register = () => {
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [visible, setVisible] = useState(false);
+
   return (
     <div>
       <section className="bg-white">
@@ -15,13 +21,10 @@ const Register = () => {
             />
           </aside>
 
-          <main
-            aria-label="Main"
-            className="flex items-center justify-center px-8 py-8 sm:px-12 lg:col-span-7 lg:py-12 lg:px-16 xl:col-span-6"
-          >
+          <main className="flex items-center justify-center px-8 py-8 sm:px-12 lg:col-span-7 lg:py-12 lg:px-16 xl:col-span-6">
             <div className="max-w-xl lg:max-w-3xl">
               <h1 className="mt-6 text-2xl font-bold text-gray-900 sm:text-3xl md:text-4xl">
-                Welcome to BazaryBka
+                Welcome to Diwaxan
               </h1>
 
               <p className="mt-4 leading-relaxed text-gray-500">
@@ -31,83 +34,96 @@ const Register = () => {
 
               <form action="#" className="mt-8 grid grid-cols-6 gap-6">
                 <div className="col-span-6 sm:col-span-3">
-                  <label
-                    for="FirstName"
-                    className="block text-sm font-medium text-gray-700"
-                  >
-                    First Name
-                  </label>
-
                   <input
                     type="text"
-                    id="FirstName"
-                    name="first_name"
-                    className="mt-1 w-full rounded border-beige bg-white text-sm text-gray-700 shadow-sm"
+                    name="firstName"
+                    autoComplete="firstName"
+                    placeholder="first name"
+                    required
+                    value={firstName}
+                    onChange={(e) => setFirstName(e.target.value)}
+                    className="mt-1 w-full rounded p-4 text-sm text-gray-700 shadow-sm"
                   />
                 </div>
 
                 <div className="col-span-6 sm:col-span-3">
-                  <label
-                    for="LastName"
-                    className="block text-sm font-medium text-gray-700"
-                  >
-                    Last Name
-                  </label>
-
                   <input
                     type="text"
-                    id="LastName"
-                    name="last_name"
-                    className="mt-1 w-full rounded border-beige bg-white text-sm text-gray-700 shadow-sm"
+                    name="lastName"
+                    autoComplete="lastName"
+                    placeholder="last name"
+                    required
+                    value={lastName}
+                    onChange={(e) => setLastName(e.target.value)}
+                    className="mt-1 w-full rounded p-4 text-sm text-gray-700 shadow-sm"
                   />
                 </div>
 
                 <div className="col-span-6">
-                  <label
-                    for="Email"
-                    className="block text-sm font-medium text-gray-700"
-                  >
-                    Email
-                  </label>
-
                   <input
                     type="email"
-                    id="Email"
                     name="email"
-                    className="mt-1 w-full rounded border-beige bg-white text-sm text-gray-700 shadow-sm"
+                    className="w-full rounded p-4 pr-12 text-sm shadow-sm"
+                    placeholder="Enter email"
+                    autoComplete="email"
+                    required
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                   />
                 </div>
 
-                <div className="col-span-6 sm:col-span-3">
-                  <label
-                    for="Password"
-                    className="block text-sm font-medium text-gray-700"
-                  >
-                    Password
-                  </label>
-
+                <div className="col-span-6 sm:col-span-3 relative">
                   <input
-                    type="password"
-                    id="Password"
+                    type={visible ? "text" : "password"}
                     name="password"
-                    className="mt-1 w-full rounded-md border-beige bg-white text-sm text-gray-700 shadow-sm"
+                    required
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    placeholder="password"
+                    className="mt-1 w-full rounded-md p-4 text-sm text-gray-700 shadow-sm"
                   />
+                  {visible ? (
+                    <span className="absolute inset-y-0 right-0 grid place-content-center px-4">
+                      <i
+                        className="fi fi-rr-eye cursor-pointer"
+                        onClick={() => setVisible(false)}
+                      ></i>
+                    </span>
+                  ) : (
+                    <span className="absolute inset-y-0 right-0 grid place-content-center px-4">
+                      <i
+                        className="fi fi-rr-eye-crossed cursor-pointer"
+                        onClick={() => setVisible(true)}
+                      ></i>
+                    </span>
+                  )}
                 </div>
 
-                <div className="col-span-6 sm:col-span-3">
-                  <label
-                    for="PasswordConfirmation"
-                    className="block text-sm font-medium text-gray-700"
-                  >
-                    Password Confirmation
-                  </label>
-
+                <div className="col-span-6 sm:col-span-3 relative">
                   <input
-                    type="password"
-                    id="PasswordConfirmation"
-                    name="password_confirmation"
-                    className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
+                    type={visible ? "text" : "password"}
+                    name="password"
+                    required
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    placeholder="password"
+                    className="mt-1 w-full rounded-md p-4 text-sm text-gray-700 shadow-sm"
                   />
+                  {visible ? (
+                    <span className="absolute inset-y-0 right-0 grid place-content-center px-4">
+                      <i
+                        className="fi fi-rr-eye cursor-pointer"
+                        onClick={() => setVisible(false)}
+                      ></i>
+                    </span>
+                  ) : (
+                    <span className="absolute inset-y-0 right-0 grid place-content-center px-4">
+                      <i
+                        className="fi fi-rr-eye-crossed cursor-pointer"
+                        onClick={() => setVisible(true)}
+                      ></i>
+                    </span>
+                  )}
                 </div>
 
                 <div className="col-span-6">
@@ -125,7 +141,7 @@ const Register = () => {
                     </span>
                   </label>
                 </div>
-
+                {/* 
                 <div className="col-span-6">
                   <p className="text-sm text-gray-500">
                     By creating an account, you agree to our
@@ -138,16 +154,16 @@ const Register = () => {
                     </Link>
                     .
                   </p>
-                </div>
+                </div> */}
 
                 <div className="col-span-6 sm:flex sm:items-center sm:gap-4">
-                  <button className="inline-block shrink-0 rounded bg-beige px-12 py-3 text-sm font-medium text-white transition hover:bg-lightBeige  focus:outline-none focus:ring >
+                  <button className="inline-block shrink-0 rounded bg-beige px-12 py-3 text-sm font-medium text-white transition hover:bg-lightBeige  focus:outline-none focus:ring ">
                     Create an account
                   </button>
 
                   <p className="mt-4 text-sm text-gray-500 sm:mt-0">
                     Already have an account?
-                    <Link to="#" className="text-gray-700 underline">
+                    <Link to="/login" className=" text-beige font-semibold ">
                       Log in
                     </Link>
                     .
