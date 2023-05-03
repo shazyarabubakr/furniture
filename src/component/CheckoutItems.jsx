@@ -1,7 +1,7 @@
 import React from "react";
 import { increase, decrease, remove } from "../component/State/Slice/CartSlice";
 import { useDispatch } from "react-redux";
-const CheckoutItems = (cartItem) => {
+const CheckoutItems = ({cartItem}) => {
   const dispatch = useDispatch();
   const { id, name, price, amount, image1 } = cartItem;
   return (
@@ -10,7 +10,7 @@ const CheckoutItems = (cartItem) => {
       key={id}
     >
       <div className="flex items-center gap-4">
-        <img src={image1} alt="" className="w-20 h-20 object-cover" />
+        <img src={image1} alt="" className="w-20 h-20 object-cover"/>
       </div>
       <div className="flex flex-col items-start max-w-[6.8rem]">
         <div>{name}</div>
