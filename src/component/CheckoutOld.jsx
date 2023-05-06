@@ -3,7 +3,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const CheckoutOld = () => {
-  // const dispatch = useDispatch();
   return (
     <>
       <div class="flex flex-col items-center border-b bg-white py-4 sm:flex-row sm:px-10 lg:px-20 xl:px-32">

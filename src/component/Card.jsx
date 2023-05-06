@@ -1,5 +1,5 @@
 import React from "react";
-import { add } from "./State/Slice/CartSlice";
+import { add } from "./State/features/CartSlice";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 const Card = ({ item }) => {

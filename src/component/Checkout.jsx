@@ -1,25 +1,33 @@
 import React from "react";
 // import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { clear } from "./State/Slice/CartSlice";
+// import { total } from "../component/State/features/CartSlice";
+import { clear } from "./State/features/CartSlice";
 import CheckoutItems from "./CheckoutItems";
 
 const Checkout = () => {
   const dispatch = useDispatch();
-  const { cartItems, total } = useSelector((state) => state.cart);
+  const { cartItems, total, amount } = useSelector((state) => state.cart);
 
+  // useEffect(() => {
+  //   dispatch(total());
+  // }, [cartItems]);
+
+  // console.log(cartItems);
   return (
     <div>
       <section class="h-screen bg-gray-100 py-8 sm:py-16 lg:py-15">
         <div class="mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mt-8">
             {cartItems.length === 0 ? (
-              <div className="uppercase text-center text-2xl">
-                Your cart is empty
+              <div class="flex items-center justify-center">
+                <h1 class="text-2xl font-semibold text-gray-900">
+                  Your Cart is empty{" "}
+                </h1>
               </div>
             ) : (
               <>
-                  {cartItems.map((cartItem) => {
+                {cartItems.map((cartItem) => {
                   return (
                     <CheckoutItems key={cartItem.id} cartItem={cartItem} />
                   );
@@ -37,9 +45,7 @@ const Checkout = () => {
               </>
             )}
           </div>
-          {/* <div class="flex items-center justify-center">
-            <h1 class="text-2xl font-semibold text-gray-900">Your Cart</h1>
-          </div>
+          {/* 
         
           <div class="mx-auto mt-8 max-w-2xl md:mt-12">
             <div class="bg-white shadow">

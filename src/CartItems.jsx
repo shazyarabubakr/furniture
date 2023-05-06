@@ -9,7 +9,7 @@ export const items = [
     image2: bedroom,
     alt: "kitchen",
     name: "Modern kitchen",
-    price: "678$",
+    price: 678,
     amount: 3,
   },
   {
@@ -18,7 +18,7 @@ export const items = [
     image2: modernSofa,
     alt: "classic sofa",
     name: "Modern sofa",
-    price: "376$",
+    price: 376,
     amount: 7,
   },
   {
@@ -27,7 +27,7 @@ export const items = [
     image2: modernSofa,
     alt: "vintage sofa",
     name: "Modern sofa",
-    price: "200$",
+    price: 200,
     amount: 9,
   },
   {
@@ -36,7 +36,7 @@ export const items = [
     image2: modernSofa,
     alt: "modern sofa",
     name: "Modern sofa",
-    price: "149$",
+    price: 149,
     amount: 3,
   },
   {
@@ -45,7 +45,7 @@ export const items = [
     image2: modernSofa,
     alt: "vintage sofa",
     name: "Modern sofa",
-    price: "200$",
+    price: 200,
     amount: 7,
   },
   {
@@ -54,7 +54,7 @@ export const items = [
     image2: modernSofa,
     alt: "modern sofa",
     name: "Modern sofa",
-    price: "149$",
+    price: 149,
     amount: 9,
   },
 ];

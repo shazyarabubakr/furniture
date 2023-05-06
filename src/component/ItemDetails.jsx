@@ -1,6 +1,6 @@
 import { Link, useParams } from "react-router-dom";
 import kitchen from "../asset/image/kitchen.jpg";
-import { add } from "../component/State/Slice/CartSlice";
+import { add } from "../component/State/features/CartSlice";
 import { useDispatch } from "react-redux";
 import { items } from "../CartItems";
 
