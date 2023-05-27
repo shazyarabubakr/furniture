@@ -8,7 +8,7 @@ const ItemDetails = () => {
   const dispatch = useDispatch();
   const { id } = useParams();
   const item = items.find((item) => item.id === parseInt(id));
-  const { name, price, image1 } = item;
+  const { name, price, images } = item;
   const rating = [
     {
       id: 1,
@@ -36,7 +36,7 @@ const ItemDetails = () => {
                 <div className="max-w-xl overflow-hidden rounded-lg">
                   <img
                     className="h-full w-full max-w-full object-cover"
-                    src={image1}
+                    src={images[0].url}
                     alt=""
                   />
                 </div>

@@ -1,8 +1,24 @@
 import React from "react";
-import furn1 from "../asset/image/furn2.jpg";
+import furn2 from "../asset/image/furn2.jpg";
+// import furn1 from "../asset/image/furn1.jpg";
+// import furn3 from "../asset/image/livingroom.jpg";
 import { Link } from "react-router-dom";
+import Slider from "react-slick";
 
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 const Hero = () => {
+  // const settings = {
+  //   dots: true,
+  //   infinite: true,
+  //   slidesToShow: 1,
+  //   slidesToScroll: 1,
+  //   adaptiveHeight: true,
+  //   autoplay: true,
+  //   speed: 2000,
+  //   autoplaySpeed: 5000,
+  //   arrows: false,
+  // };
   return (
     <>
       <div className="relative flex flex-col-reverse py-20 lg:pt-0 lg:flex-col lg:pb-0">
@@ -17,10 +33,25 @@ const Hero = () => {
           </svg>
           <img
             className="object-cover w-full h-3/4 shadow-lg lg:rounded-none lg:shadow-none md:h-3/4 lg:h-full"
-            src={furn1}
+            src={furn2}
             alt="furniture"
           />
         </div>
+        {/* <div>
+              <img
+                className="object-cover w-full h-3/4 shadow-lg lg:rounded-none lg:shadow-none md:h-3/4 lg:h-full"
+                src={furn1}
+                alt="furniture"
+              />
+            </div>
+            <div>
+              <img
+                className="object-cover w-full h-3/4 shadow-lg lg:rounded-none lg:shadow-none md:h-3/4 lg:h-full"
+                src={furn3}
+                alt="furniture"
+              />
+            </div>
+          </Slider> */}
         <div className="relative flex flex-col items-start lg:h-screen w-full max-w-xl px-4 mx-auto md:px-8 md:max-w-screen-xl ">
           <div className=" mb-16 lg:my-40 lg:max-w-lg backdrop-blur-xs ">
             <h2 className="mb-5 font-sans md:text-3xl font-bold tracking-tight sm:text-2xl sm:leading-none">
